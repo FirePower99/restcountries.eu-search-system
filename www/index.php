@@ -74,33 +74,5 @@
 
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/bootstrap-select.min.js"></script>
-
-
-
-<?php
-
-	// $conn = mysqli_connect('db', 'root', 'test', "restcountries");
-
-	// $query = 'SELECT * From countries';
-	// $result = mysqli_query($conn, $query);
-
-
-    // echo '<table class="table table-striped">';
-    // echo '<thead><tr><th></th><th>id</th><th>name</th></tr></thead>';
-    // while($value = $result->fetch_array(MYSQLI_ASSOC)){
-        // echo '<tr>';
-        // echo '<td><span class="glyphicon glyphicon-search"></span></td>';
-        // foreach($value as $element){
-            // echo '<td>' . $element . '</td>';
-        // }
-
-        // echo '</tr>';
-    // }
-    // echo '</table>';
-
-    // $result->close();
-
-    // mysqli_close($conn);
-
-?>
+	
 </html>
