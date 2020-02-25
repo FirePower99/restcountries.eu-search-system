@@ -26,11 +26,11 @@
 					</div>
 					<div class="row">
 						<div class="col">
-							<label for="code">Country Code:</label> 
-							<input id="code" name="code" type="text" maxlength="2" class="form-control">
+							<label for="alpha2code">Country Code:</label> 
+							<input id="alpha2code" name="alpha2code" type="text" maxlength="2" class="form-control">
 						</div>
 						<div class="col">					
-							<input type="radio" id="r_code" name="check" value="code">
+							<input type="radio" id="r_alpha2code" name="check" value="alpha2code">
 						</div>
 					</div> 
 					<div class="row">
@@ -44,20 +44,20 @@
 					</div> 
 					<div class="row">
 						<div class="col">
-							<label for="currency">Currency Code:</label> 
-							<input id="currency" name="currency" type="text" maxlength="3" class="form-control">
+							<label for="currencies">Currency Code:</label> 
+							<input id="currencies" name="currencies" type="text" maxlength="3" class="form-control">
 						</div>
 						<div class="col">
-						<input type="radio" id="r_currency" name="check" value="currency">
+						<input type="radio" id="r_currencies" name="check" value="currencies">
 						</div>
 					</div>
 					<div class="row">
 						<div class="col">		  
-							<label for="language">Language:</label> 
-							<input id="language" name="language" type="text" class="form-control">
+							<label for="languages">Language:</label> 
+							<select id="languages" name="languages" class="selectpicker countrypicker form-control" data-live-search="true" data-default="" data-flag="true"></select>
 						</div>
 						<div class="col">
-							<input type="radio" id="r_language" name="check" value="language">
+							<input type="radio" id="r_languages" name="check" value="languages">
 						</div>
 					</div>
 
