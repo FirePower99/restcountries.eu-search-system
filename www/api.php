@@ -31,7 +31,7 @@ function RestCountryApi($type, $field) {
 	$count= count($dataArray);
 
 	echo '<table class="table table-striped">';
-	echo '<thead><tr><th>Name</th><th>Dialing Codes</th><th>Region</th><th>Capital</th><th>Timezones</th><th>Currencies</th><th>Flag</th></tr></thead>';
+	echo '<thead><tr><th scope="col">Name</th><th scope="col">Dialing Codes</th><th scope="col">Region</th><th scope="col">Capital</th><th scope="col">Timezones</th><th scope="col">Currencies</th><th scope="col">Flag</th></tr></thead>';
 
 	if ($type == "alpha") {
 	
@@ -45,9 +45,9 @@ function RestCountryApi($type, $field) {
 		$_capital = $dataArray["capital"];
 		$_callingCodes = $dataArray["callingCodes"][0];
 		$_flag = $dataArray["flag"];
-		$_languages;
-		$_timezones;
-		$_currencies;
+		$_languages = '';
+		$_timezones = '';
+		$_currencies = '';
 		for ($f=0; $f < $langcount; $f++) { $_languages .= $dataArray["languages"][$f]["iso639_1"]. ";"; }
 		for ($g=0; $g < $timecount; $g++) { $_timezones .= ''.$dataArray["timezones"][$g]. ';'; }
 		for ($h=0; $h < $currcount; $h++) { $_currencies .= $dataArray["currencies"][$h]["code"]. ";"; }
@@ -71,7 +71,7 @@ function RestCountryApi($type, $field) {
 		if(mysqli_num_rows($result) == 0){
 			$insert = 'INSERT INTO countries (name, alpha2code, region, capital, callingcodes, timezones, languages, currencies, flag) VALUES ("'.$_name.'", "'.$_alpha2code.'", "'.$_region.'", "'.$_capital.'", "'.$_callingCodes.'", "'.$_timezones.'", "'.$_languages.'", "'.$_currencies.'", "'.$_flag.'" )';
 			if (mysqli_query($conn, $insert)) {
-				echo "New record created successfully";
+
 			} else {
 				echo "Error: " . $sql . "" . mysqli_error($conn);
 			}
@@ -91,9 +91,9 @@ function RestCountryApi($type, $field) {
 			$_capital = $dataArray[$i]["capital"];
 			$_callingCodes = $dataArray[$i]["callingCodes"][0];
 			$_flag = $dataArray[$i]["flag"];
-			$_languages;
-			$_timezones;
-			$_currencies;
+			$_languages = '';
+			$_timezones = '';
+			$_currencies = '';
 			for ($f=0; $f < $langcount; $f++) { $_languages .= $dataArray[$i]["languages"][$f]["iso639_1"]. ";"; }
 			for ($g=0; $g < $timecount; $g++) { $_timezones .= ''.$dataArray[$i]["timezones"][$g]. ';'; }
 			for ($h=0; $h < $currcount; $h++) { $_currencies .= $dataArray[$i]["currencies"][$h]["code"]. ";"; }
@@ -117,7 +117,7 @@ function RestCountryApi($type, $field) {
 				$conn = db();
 				$insert = 'INSERT INTO countries (name, alpha2code, region, capital, callingcodes, timezones, languages, currencies, flag) VALUES ("'.$_name.'", "'.$_alpha2code.'", "'.$_region.'", "'.$_capital.'", "'.$_callingCodes.'", "'.$_timezones.'", "'.$_languages.'", "'.$_currencies.'", "'.$_flag.'" )';
 				if (mysqli_query($conn, $insert)) {
-					echo "New record created successfully";
+					
 				} else {
 					echo "Error: " . $sql . "" . mysqli_error($conn);
 				}

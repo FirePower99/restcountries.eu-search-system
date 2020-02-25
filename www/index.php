@@ -67,7 +67,9 @@
 
 				</form>
 			</div>
-		</div>	
+		</div>
+		<section class="tableholder" style=width: 100vw;">
+		</section>
 	</body>
 
 	<script src="assets/js/bootstrap.min.js"></script>

@@ -23,9 +23,9 @@ CREATE TABLE `countries` (
 
 
 INSERT INTO `countries` (`name`, `alpha2code`, `region`, `capital`, `callingcodes`, `timezones`, `languages`, `currencies`, `flag`, `index`) VALUES
-('Singapore', 'SG', 'Asia', 'Singapore', '65', '\"UTC+08:00\";', 'en;ms;ta;zh;', 'BND;SGD;', 'https://restcountries.eu/data/sgp.svg', 1),
-('United Kingdom of Great Britain and Northern Ireland', 'GB', 'Europe', 'London', '44', '\"UTC-08:00\";\"UTC-05:00\";\"UTC-04:00\";\"UTC-03:00\";\"UTC-02:00\";\"UTC\";\"UTC+01:00\";\"UTC+02:00\";\"UTC+06:00\";', 'en;', 'GBP;', 'https://restcountries.eu/data/gbr.svg', 2),
-('United States of America', 'US', 'Americas', 'Washington, D.C.', '1', '\"UTC-12:00\";\"UTC-11:00\";\"UTC-10:00\";\"UTC-09:00\";\"UTC-08:00\";\"UTC-07:00\";\"UTC-06:00\";\"UTC-05:00\";\"UTC-04:00\";\"UTC+10:00\";\"UTC+12:00\";', 'en;', 'USD;', 'https://restcountries.eu/data/usa.svg', 3);
+('Singapore', 'SG', 'Asia', 'Singapore', '65', 'UTC+08:00;', 'en;ms;ta;zh;', 'BND;SGD;', 'https://restcountries.eu/data/sgp.svg', 1),
+('United Kingdom of Great Britain and Northern Ireland', 'GB', 'Europe', 'London', '44', 'UTC-08:00;UTC-05:00;UTC-04:00;UTC-03:00;UTC-02:00;UTC;UTC+01:00;UTC+02:00;UTC+06:00;', 'en;', 'GBP;', 'https://restcountries.eu/data/gbr.svg', 2),
+('United States of America', 'US', 'Americas', 'Washington, D.C.', '1', 'UTC-12:00;UTC-11:00;UTC-10:00;UTC-09:00;UTC-08:00;UTC-07:00;UTC-06:00;UTC-05:00;UTC-04:00;UTC+10:00;UTC+12:00;', 'en;', 'USD;', 'https://restcountries.eu/data/usa.svg', 3);
 
 ALTER TABLE `countries`
   ADD PRIMARY KEY (`index`);

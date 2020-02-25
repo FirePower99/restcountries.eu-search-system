@@ -7,8 +7,9 @@ $(document).ready(function(){
 		if($('#' + x).val() == ''){
 		alert(x + ' can not be left blank');
 		} else {
-			$.post( "api.php", { name: "search", type: x, field: $('#' + x).val() }).done(function( data ) {
-			});
+			$.post( "api.php", { name: "search", type: x, field: $('#' + x).val() }, function( data ) {
+				$( ".tableholder" ).html( data );
+			}, "html");		
 		}
 		event.preventDefault();
 	});
